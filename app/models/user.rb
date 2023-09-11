@@ -8,7 +8,6 @@ class User < ApplicationRecord
   has_many :transactions, class_name: "Entity", foreign_key: :transaction_id
   has_many :categories, class_name: "Group", foreign_key: :category_id
   # Add the :name attribute
-  attr_accessor :name
 
   # Validate that the name field is not blank
   validates :name, presence: true
