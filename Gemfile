@@ -30,6 +30,12 @@ gem 'jbuilder'
 # Add rubocop
 gem 'rubocop'
 
+# Add Devise
+gem 'devise'
+
+# Add Postgres
+gem 'pg'
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
