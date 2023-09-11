@@ -16,4 +16,4 @@ jobs:
           [ -f Gemfile ] && bundle
           gem install --no-document rspec
       - name: RSpec Report
-        run: rspec --force-color --format documentation --exclude-pattern "spec/helpers/*"
+        run: rspec --force-color --format documentation --exclude-pattern "./spec/helpers/*"
