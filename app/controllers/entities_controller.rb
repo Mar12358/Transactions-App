@@ -1,4 +1,6 @@
 class EntitiesController < ApplicationController
+  load_and_authorize_resource
+
   def index
     @category = Group.find(params[:group_id])
     @transactions = @category.transactions.where(author: current_user).order(created_at: :desc)
@@ -10,17 +12,15 @@ class EntitiesController < ApplicationController
   end
 
   def create
-    @category = Group.find(post_params[:category_id])
-    @transaction = Entity.new(post_params)
-    @transaction.author = current_user
+    @transaction = current_user.transactions.new(entity_params)
     if @transaction.save
-      redirect_to group_entities_path(@category), notice: 'Transaction was successfully created.'
+      redirect_to group_entities_path(entity_params[:category_id]), notice: 'Transaction was successfully created.'
     else
       render :new
     end
   end
 
-  def post_params
+  def entity_params
     params.require(:entity).permit(:amount, :name, :category_id)
   end
 end

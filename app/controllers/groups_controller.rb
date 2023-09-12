@@ -1,15 +1,15 @@
 class GroupsController < ApplicationController
+  load_and_authorize_resource
   def index
     @categories = Group.includes(:transactions, :author).where(author: current_user)
   end
 
   def new
-    @category = Group.new
+    @category = current_user.categories.build
   end
 
   def create
-    @category = Group.new(post_params)
-    @category.author = current_user
+    @category = current_user.categories.new(group_params)
 
     if @category.save
       redirect_to groups_path, notice: 'Category was successfully created.'
@@ -18,7 +18,7 @@ class GroupsController < ApplicationController
     end
   end
 
-  def post_params
-    params.require(:group).permit(:icon, :name)
+  def group_params
+    params.require(:group).permit(:name, :icon)
   end
 end
