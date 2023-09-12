@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   unauthenticated do
     root "home#index", as: :unauthenticated_root
   end
-  resources :categories, only: [:index, :show, :new, :create, :destroy] do
+  resources :groups, only: [:index, :show, :new, :create, :destroy] do
     resources :entities, only: [:index, :show, :new, :create, :destroy]
   end
 end
