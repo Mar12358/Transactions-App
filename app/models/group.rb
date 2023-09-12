@@ -8,7 +8,7 @@ class Group < ApplicationRecord
 
   def total_amount
     total = 0
-    transactions.each do |_t|
+    transactions.each do |transaction|
       total += transaction.amount.to_i
     end
     total
