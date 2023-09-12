@@ -1,0 +1,11 @@
+
+
+<a class="d-flex align-items-center">
+    <%= button_to "LogOut", destroy_user_session_path, method: :delete, class: "btn btn-outline-light btn-sm" %>
+</a>
+
+<a href="<%= groups_path %>">
+  <button id="back-btn">⬅ Back</button>
+</a>
+<h1 class= "text-center m-2">Transactions, cat_id: <%= @category.name %></h1>
+

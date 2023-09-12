@@ -5,7 +5,7 @@
 
 <ul id="categories" class = "m-0 p-0">
   <% @categories.each do |category| %>
-    <a class = "" href="<%= group_path(category) %>">
+    <a class = "" href="<%= group_entities_path(category) %>">
       <img class = "category-image" src= "<%= category.icon %>" alt="<%= category.name %>_image">
       <p class = ""><%= category.name %></p>
       <p class = "">Total amount: <%= category.total_amount %></p>
