@@ -7,5 +7,16 @@
 <a href="<%= groups_path %>">
   <button id="back-btn">⬅ Back</button>
 </a>
-<h1 class= "text-center m-2">Transactions, cat_id: <%= @category.name %></h1>
+<h1 class= "text-center m-2">Transactions</h1>
+<p class= "text-center m-2">Total amount: <%= @category.total_amount %></p>
+<ul id="categories" class = "m-0 p-0">
+  <% @transactions.each do |transaction| %>
+      <p class = ""><%= transaction.name %></p>
+      <p class = "">Amount: <%= transaction.amount %></p>
+  <% end %>
 
+
+</ul>
+<a class = "d-flex justify-content-center" href="<%= new_group_entity_path(@category) %>">
+  <button class='btn btn-primary mt-3'>Add a new Transaction</button>
+</a>

@@ -1,0 +1,26 @@
+<%= puts @category%>
+<a href="<%#= group_entities_path(@category) %>">
+  <button id="back-btn">⬅ Back</button>
+</a>
+<h1 id = "form-title" class= "">Add new Transaction</h1>
+<%= form_with(model: [@transaction], url: group_entities_path(@category)) do |form| %>
+  <div class = "form-container mx-5">
+    <div class="form-group text-center mt-2">
+      <%= form.text_field :name, autofocus: true, autocomplete: "name", placeholder: "Transaction Name", class: "form-control", required: true %>
+    </div>
+
+    <div class="form-group text-center mt-2">
+      <%= form.collection_select(:category_id, Group.where(author: current_user).all, :id, :name, { prompt: "Select a Category" }, { class: "form-select", required: true, data: { validation: "required" } }) %>
+
+    </div>
+    
+    <div class="form-group text-center mt-2">
+      <%= form.number_field :amount, autofocus: true, autocomplete: "amount", placeholder: "Transaction Amount", class: "form-control", required: true %>
+    </div>
+    
+
+    <div class="text-center">
+      <%= form.submit 'Create Transaction', class: "btn btn-primary mt-3"%>
+    </div>
+  </div>
+<% end %>
