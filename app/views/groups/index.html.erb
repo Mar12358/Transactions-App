@@ -1,1 +1,20 @@
-<h1>Categories</h1>
+<a class="d-flex align-items-center">
+    <%= button_to "LogOut", destroy_user_session_path, method: :delete, class: "btn btn-outline-light btn-sm" %>
+</a>
+<h1 class= "text-center m-2">Categories</h1>
+
+<ul id="categories" class = "m-0 p-0">
+  <% @categories.each do |category| %>
+    <a class = "" href="<%= group_path(category) %>">
+      <img class = "category-image" src= "<%= category.icon %>" alt="<%= category.name %>_image">
+      <p class = ""><%= category.name %></p>
+      <p class = "">Total amount: <%= category.total_amount %></p>
+      
+    </div>
+  <% end %>
+
+
+</ul>
+<a class = "d-flex justify-content-center" href="<%= new_group_path %>">
+  <button class='btn btn-primary mt-3'>Add a new Category</button>
+</a>
