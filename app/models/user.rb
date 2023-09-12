@@ -9,5 +9,5 @@ class User < ApplicationRecord
   # Add the :name attribute
 
   # Validate that the name field is not blank
-  validates :name, presence: true
+  validates :name, presence: true, length: { maximum: 30, too_long: '%<count>s characters is the maximum allowed' }
 end
