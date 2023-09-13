@@ -99,5 +99,13 @@ justify-content: center;
   transform: scale(1.10);
 }
 
+.remember-me-cb {
+  width: 7vw;
+}
+
+.remember-me-label {
+  font-size: 15px;
+  margin-left: 1vw;
+}
 /* Optional: Add more styles for different button states (e.g., :active, :focus) */
 
