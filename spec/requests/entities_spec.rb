@@ -6,7 +6,6 @@ RSpec.describe 'Entities', type: :request do
       @user = User.create(name: 'Tomas', email: 'tomas@example.com', password: 'password')
       @category = Group.create(author: @user, name: 'Mc Donald\'s', icon: "image_url")
       @transaction = Entity.create(author: @user, name: 'Burger', category: @category)
-      current_user = @user
     end
 
     describe 'GET #index' do
