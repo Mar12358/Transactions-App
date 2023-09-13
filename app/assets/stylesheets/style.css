@@ -1,0 +1,242 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  background-color: #e2e2e2;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  height: 16vh;
+  background-color: #3778c2;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+}
+
+h1,
+h2 {
+  font-weight: 500;
+  color: rgb(243, 242, 242);
+  text-align: center;
+  font-size: 23px;
+  text-transform: uppercase;
+}
+
+.header h1,
+.header h2 {
+  padding-bottom: 5px;
+}
+
+#categories,
+.form-container,
+.img-amount-container,
+.home-ul {
+  margin-top: 16vh;
+}
+
+a,
+a:visited {
+  color: inherit; /* Use the same color as the default text color */
+}
+
+.home-ul,
+.form-container {
+  height: 75vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 37px;
+}
+
+.form-container {
+  height: 60vh;
+}
+
+.home-ul a {
+  text-align: center;
+  background-color: rgb(245, 245, 245);
+  width: 90%;
+  padding-top: 4vh;
+  padding-bottom: 4vh;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+.field,
+.form-btn-container,
+.field_with_errors {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.input-field {
+  width: 90%;
+  height: 7vh;
+  padding-left: 6px;
+  font-size: 2.5vh;
+}
+
+.input-field::placeholder {
+  padding-left: 6px;
+  font-size: 2.4vh;
+}
+
+/* Basic button styles */
+.form-btn {
+  width: 60%;
+  display: inline-block;
+  margin-top: 2vh;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: #3778c2;
+  color: #fff;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+/* Button hover effect */
+.form-btn:hover {
+  background-color: #206a9b;
+  transform: scale(1.1);
+}
+
+.remember-me-cb {
+  width: 7vw;
+}
+
+.remember-me-label {
+  font-size: 15px;
+  margin-left: 1vw;
+}
+
+/* Optional: Add more styles for different button states (e.g., :active, :focus) */
+
+#error_explanation,
+#error_explanation * {
+  font-size: 13px;
+  text-align: left;
+  text-transform: none;
+  color: rgba(255, 0, 0, 0.582);
+  padding-left: 3px;
+  font-weight: 600;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.back-btn-a {
+  margin-left: 4%;
+}
+
+.categories-ul {
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 85px;
+}
+
+.categories-ul li,
+.categories-ul a {
+  margin-top: 10px;
+  text-align: center;
+  background-color: rgb(245, 245, 245);
+  width: 92%;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.categories-ul li p {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.img-amount-container {
+  width: 100%;
+  background-color: rgb(245, 245, 245);
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+  padding-top: 1.5vh;
+  padding-bottom: 1.5vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.img-container {
+  height: 80px;
+  width: 80px;
+}
+
+.trans-amount {
+  padding-right: 4%;
+  font-size: 19px;
+  font-weight: 600;
+}
+
+.trans-total-container {
+  display: flex;
+  align-items: center;
+  padding-left: 4%;
+}
+
+.trans-name {
+  margin-left: 3vw;
+  font-size: 18px;
+}
+
+.category-image {
+  width: 100%; /* Fill the container width */
+  height: 100%;
+  object-fit: cover;
+}
+
+.log-out-a {
+  background-color: transparent;
+  border: none;
+}
+
+.nav-container .button_to {
+  padding-right: 4%;
+}
+
+.add-new,
+.add-new-a {
+  background-color: #5fb523;
+}
+
+.add-new-a {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.add-new {
+  border: 2px solid rgb(245, 245, 245);
+  color: rgb(245, 245, 245);
+  padding: 15px;
+  margin: 13px;
+  width: 92%;
+  text-transform: uppercase;
+}
