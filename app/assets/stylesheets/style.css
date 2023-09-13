@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  background-color: #e2e2e2;
+}
+
+.header {
+  height: 16vh;
+  background-color: #3778c2;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding-bottom: 5px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+}
+
+a:visited {
+  color: inherit; /* Use the same color as the default text color */
+}
+
+p,
+a,
+h1,
+h2 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+  font-weight: 500;
+  color: rgb(243, 242, 242);
+  text-align: center;
+  font-size: 9vw;
+  
+}
+
+.home-ul {
+  height: 75vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 13vw;
+}
+
+.home-ul a {
+  text-align: center;
+  background-color: rgb(245, 245, 245);
+  width: 90%;
+  padding-top: 4vh;
+  padding-bottom: 4vh;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+
+}
