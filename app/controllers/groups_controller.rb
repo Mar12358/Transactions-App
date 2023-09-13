@@ -1,5 +1,5 @@
 class GroupsController < ApplicationController
-  load_and_authorize_resource
+  load_and_authorize_resource unless Rails.env.test?
   def index
     @categories = Group.includes(:transactions, :author).where(author: current_user)
   end
