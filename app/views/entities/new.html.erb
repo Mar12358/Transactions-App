@@ -3,7 +3,8 @@
     <img class="back-btn"  src="<%= asset_path('arrow_back.ico') %>" alt="Back" id="back-img">
   </a>
   <h1>Add new Transaction</h1>
-</div>  
+</div> 
+ 
 <%= form_with(model: [@transaction], url: group_entities_path(@category)) do |form| %>
   <div class = "form-container">
     <div class="field">

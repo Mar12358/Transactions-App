@@ -1,17 +1,15 @@
-
 <div class="header">
   <div class="nav-container">
     <a class="back-btn-a" href="<%= groups_path %>">
       <img class="back-btn"  src="<%= asset_path('arrow_back.ico') %>" alt="Back" id="back-img">
     </a>
-
     <%= button_to destroy_user_session_path, method: :delete, class: "log-out-a", data: { turbo: false } do %>
       <img class="back-btn"  src="<%= asset_path('logout.ico') %>" alt="Back" id="back-img">  
     <% end %>
   </div>
-
   <h1>Transactions</h1>
 </div>
+
 <div class = "img-amount-container">
   <div class="trans-total-container">
     <div class = "img-container">
@@ -22,19 +20,15 @@
   <p class= "trans-amount">Total: $<%= @category.total_amount %></p>
 </div>
 
-<ul id="categories" class = "categories-ul">
+<ul id="transactions" class = "categories-ul">
   <% @transactions.each do |transaction| %>
     <li>
-
-      
-
       <p class = ""><%= transaction.name %></p>
       <p class = "">$<%= transaction.amount %></p>
     </li>  
   <% end %>
-
-
 </ul>
+
 <a class = "add-new-a" href="<%= new_group_entity_path(@category) %>">
   <button class='add-new'>Add a new Transaction</button>
 </a>
