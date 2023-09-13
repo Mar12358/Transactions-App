@@ -11,7 +11,10 @@ class User < ApplicationRecord
   # Validate that the name field is not blank
   validates :name, presence: true, length: { maximum: 30, too_long: '%<count>s characters is the maximum allowed' }
 
-  enum role: { admin: 'admin' }
+  enum role: {
+    admin: 'admin',
+    empty: ''
+  }
 
   def admin?
     role == 'admin'
