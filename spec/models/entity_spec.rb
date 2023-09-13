@@ -4,7 +4,7 @@ RSpec.describe Entity, type: :model do
   describe 'validations' do
     before(:each) do
       @user = User.create(name: 'Tomas', email: 'tomas@example.com', password: 'password')
-      @category = Group.create(author: @user, name: 'Mc Donald\'s', icon: "image_url")
+      @category = Group.create(author: @user, name: 'Mc Donald\'s', icon: 'image_url')
       @transaction = Entity.create(author: @user, name: 'Burger', category: @category, amount: 3)
     end
 

@@ -4,7 +4,7 @@ RSpec.describe 'Entities', type: :request do
   describe EntitiesController do
     before(:each) do
       @user = User.create(name: 'Tomas', email: 'tomas@example.com', password: 'password')
-      @category = Group.create(author: @user, name: 'Mc Donald\'s', icon: "image_url")
+      @category = Group.create(author: @user, name: 'Mc Donald\'s', icon: 'image_url')
       @transaction = Entity.create(author: @user, name: 'Burger', category: @category)
     end
 
@@ -25,7 +25,7 @@ RSpec.describe 'Entities', type: :request do
         expect(response.body).to include('Transactions')
       end
     end
-  
+
     describe 'GET #new' do
       before do
         get new_group_entity_path(@category)
@@ -43,7 +43,5 @@ RSpec.describe 'Entities', type: :request do
         expect(response.body).to include('Add new Transaction')
       end
     end
-
-
   end
 end
