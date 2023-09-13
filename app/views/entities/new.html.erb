@@ -1,6 +1,6 @@
 <%= puts @category%>
-<a href="<%#= group_entities_path(@category) %>">
-  <button id="back-btn">⬅ Back</button>
+<a href="<%= group_entities_path(@category) %>">
+  <img class="back-btn"  src="<%= asset_path('arrow_back.ico') %>" alt="Back" id="back-img">
 </a>
 <h1 id = "form-title" class= "">Add new Transaction</h1>
 <%= form_with(model: [@transaction], url: group_entities_path(@category)) do |form| %>

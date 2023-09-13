@@ -1,4 +1,7 @@
 <div class="header">
+<a class="back-btn-a" href="/">
+  <img class="back-btn" src="<%= asset_path('arrow_back.ico') %>" alt="Back" id="back-img">
+</a>
   <h2>Log in</h2>
 </div>
 <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: "form-container" }) do |f| %>

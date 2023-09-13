@@ -5,7 +5,7 @@
 </a>
 
 <a href="<%= groups_path %>">
-  <button id="back-btn">⬅ Back</button>
+  <img class="back-btn"  src="<%= asset_path('arrow_back.ico') %>" alt="Back" id="back-img">
 </a>
 <h1 class= "text-center m-2">Transactions</h1>
 <p class= "text-center m-2">Total amount: <%= @category.total_amount %></p>

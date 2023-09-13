@@ -1,5 +1,5 @@
 <a href="<%= groups_path %>">
-  <button id="back-btn">⬅ Back</button>
+  <img class="back-btn"  src="<%= asset_path('arrow_back.ico') %>" alt="Back" id="back-img">
 </a>
 <h1 id = "form-title" class= "">Add new Category</h1>
 <%= form_with(model: [@category], url: groups_path) do |form| %>
