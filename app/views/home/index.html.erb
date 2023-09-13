@@ -4,7 +4,7 @@
 <ul class="home-ul">
   <% if user_signed_in? %>
     <li>
-      <%= button_to "LogOut", destroy_user_session_path, method: :delete, class: "btn btn-outline-light btn-sm text-center" %>
+      <%= button_to "LogOut", destroy_user_session_path, method: :delete %>
     </li>
   <% else %>
     <%= link_to new_user_registration_path do %>

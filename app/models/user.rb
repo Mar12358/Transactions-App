@@ -13,7 +13,7 @@ class User < ApplicationRecord
 
   enum role: {
     admin: 'admin',
-    empty: '',
+    empty: ''
   }
 
   def admin?
