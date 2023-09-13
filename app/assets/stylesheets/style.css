@@ -29,7 +29,8 @@ h2 {
   font-weight: 500;
   color: rgb(243, 242, 242);
   text-align: center;
-  font-size: 9vw;
+  font-size: 23px;
+  text-transform: uppercase;
   
 }
 
@@ -40,7 +41,7 @@ h2 {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  font-size: 13vw;
+  font-size: 37px;
 }
 
 .form-container {
@@ -109,3 +110,12 @@ justify-content: center;
 }
 /* Optional: Add more styles for different button states (e.g., :active, :focus) */
 
+#error_explanation,
+#error_explanation * {
+  font-size: 13px;
+  text-align: left;
+  text-transform: none;
+  color: rgba(255, 0, 0, 0.582);
+  padding-left: 3px;
+  font-weight: 600;
+}
