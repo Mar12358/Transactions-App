@@ -1,0 +1,17 @@
+<div class="header">
+  <h1>Transactions App</h1>
+</div>
+<ul class="home-ul">
+  <% if user_signed_in? %>
+    <li>
+      <%= button_to "LogOut", destroy_user_session_path, method: :delete %>
+    </li>
+  <% else %>
+    <%= link_to new_user_registration_path do %>
+      <li>Sign Up</li>
+    <% end %>
+    <%= link_to new_user_session_path do %>
+      <li>Log In</li>
+    <% end %>
+  <% end %>
+</ul>
