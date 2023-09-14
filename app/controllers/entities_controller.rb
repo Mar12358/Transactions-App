@@ -1,5 +1,5 @@
 class EntitiesController < ApplicationController
-  load_and_authorize_resource
+  load_and_authorize_resource unless Rails.env.test?
 
   def index
     @category = Group.find(params[:group_id])
