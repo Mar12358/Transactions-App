@@ -189,7 +189,7 @@ If you like this project,please give it a ⭐️!
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-We would like to thank all Microverse team.
+**Original design idea by [Gregoire Vella on Behance](https://www.behance.net/gregoirevella)**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -214,6 +214,7 @@ We would like to thank all Microverse team.
 <!-- LICENSE -->
 
 ## 📝 License <a name="license"></a>
+This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
 
 This project is [MIT](./LICENSE) licensed.
 
