@@ -35,7 +35,7 @@
 
 # 📖 Transactions App <a name="about-project"></a>
 
-> The Recipe app is a classic example of a blog website. It's a fully functional website where the logged user can manage foods, inventories recipies and generate a shopping list.
+> The Transactions app is a Mobile Web App, where you can add categories, and payment transactions for each category. Built with Ruby on Rails.
 
 ## 🛠 Built With <a name="built-with"></a>
 
